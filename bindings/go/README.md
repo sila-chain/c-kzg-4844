@@ -11,7 +11,7 @@ functions.
 ## Installation
 
 ```
-go get github.com/ethereum/c-kzg-4844/v2
+go get github.com/medo202225/c-kzg-4844/v2
 ```
 
 ## Tests

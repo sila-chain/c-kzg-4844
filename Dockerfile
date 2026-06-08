@@ -12,7 +12,7 @@ RUN curl https://nim-lang.org/choosenim/init.sh -sSf | sh -s -- -y
 ENV PATH=/root/.nimble/bin:$PATH
 
 # Clone the c-kzg-4844 repository
-RUN git clone --recursive --depth=1 https://github.com/ethereum/c-kzg-4844.git
+RUN git clone --recursive --depth=1 https://github.com/medo202225/c-kzg-4844.git
 
 # Set our build script as the entry point
 ENTRYPOINT "c-kzg-4844/build.sh"

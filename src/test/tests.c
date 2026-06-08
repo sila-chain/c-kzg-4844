@@ -1634,7 +1634,7 @@ static uint64_t root_of_unity_parts_8[] = {
  * but in fr_t form directly. For posterity, we have added this test to ensure the new value
  * matches. For EIP-7594, we need the 8192th root of unity, order of log2(8192)=13. Please confirm
  * that this value matches SCALE2_ROOT_OF_UNITY[13] as defined here:
- * https://github.com/ethereum/c-kzg-4844/blob/e3ef368c67c7877636c66d6c66beb1bcbf883493/src/setup/setup.h#L64
+ * https://github.com/medo202225/c-kzg-4844/blob/e3ef368c67c7877636c66d6c66beb1bcbf883493/src/setup/setup.h#L64
  */
 static uint64_t root_of_unity_parts_13[] = {
     0x6fdd00bfc78c8967L, 0x146b58bc434906acL, 0x2ccddea2972e89edL, 0x485d512737b1da3dL

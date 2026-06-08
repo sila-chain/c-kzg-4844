@@ -31,7 +31,7 @@ zig build test
 From the root of your Zig project:
 
 ```sh
-zig fetch --save=ckzg https://github.com/ethereum/c-kzg-4844/archive/<commit>.tar.gz
+zig fetch --save=ckzg https://github.com/medo202225/c-kzg-4844/archive/<commit>.tar.gz
 ```
 
 Then wire the `ckzg` module into `build.zig`:
