@@ -1,4 +1,4 @@
-module github.com/sila-org/c-kzg-4844/v2
+module github.com/sila-chain/c-kzg-4844/v2
 
 go 1.19
 
