@@ -1,7 +1,7 @@
 language: rust
 homepage: "https://github.com/sila-chain/c-kzg-4844"
 main_repo: "https://github.com/sila-chain/c-kzg-4844.git"
-primary_contact: "security-chain.org"
+primary_contact: "security@sila-chain.org"
 sanitizers:
   - address
 fuzzing_engines:

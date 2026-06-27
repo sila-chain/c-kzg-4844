@@ -38,7 +38,7 @@ def main():
         name="ckzg",
         version="2.1.6",
         author="Sila Foundation",
-        author_email="security-chain.org",
+        author_email="security@sila-chain.org",
         url="https://github.com/sila-chain/c-kzg-4844",
         description="Python bindings for C-KZG-4844",
         long_description=Path("bindings/python/README.md").read_text(),
