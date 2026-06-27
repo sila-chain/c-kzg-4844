@@ -8,7 +8,7 @@ use c_kzg::Blob;
 use c_kzg::KzgSettings;
 use lazy_static::lazy_static;
 use libfuzzer_sys::fuzz_target;
-use rust_eth_kzg::DASContext;
+use rust_sila_kzg::DASContext;
 use std::env;
 use std::path::PathBuf;
 

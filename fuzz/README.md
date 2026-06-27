@@ -7,7 +7,7 @@ there is a `fuzz_<function>.rs` file for each target. These use
 can provide the reference tests as the starting corpus, which gives `arbitrary` a better idea of
 what inputs should be. This will differentially fuzz SIP-4844 functions with
 [Constantine](https://github.com/mratsim/constantine) and SIP-7594 functions with
-[Rust-Eth-KZG](https://github.com/crate-crypto/rust-eth-kzg).
+[Rust-Sila-KZG](https://github.com/crate-crypto/rust-sila-kzg).
 
 ## Dependencies
 

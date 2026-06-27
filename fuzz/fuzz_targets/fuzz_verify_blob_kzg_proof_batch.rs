@@ -7,7 +7,7 @@ extern crate core;
 use arbitrary::Arbitrary;
 use lazy_static::lazy_static;
 use libfuzzer_sys::fuzz_target;
-use rust_eth_kzg::DASContext;
+use rust_sila_kzg::DASContext;
 use std::cell::UnsafeCell;
 use std::env;
 use std::path::PathBuf;
@@ -42,31 +42,31 @@ lazy_static! {
     static ref DAS_CONTEXT: DASContext = DASContext::default();
 }
 
-struct SafeEthKzgContext {
-    inner: UnsafeCell<constantine::EthKzgContext<'static>>,
+struct SafeSilaKzgContext {
+    inner: UnsafeCell<constantine::SilaKzgContext<'static>>,
 }
 
-unsafe impl Send for SafeEthKzgContext {}
-unsafe impl Sync for SafeEthKzgContext {}
+unsafe impl Send for SafeSilaKzgContext {}
+unsafe impl Sync for SafeSilaKzgContext {}
 
-impl SafeEthKzgContext {
-    fn new(ctx: constantine::EthKzgContext<'static>) -> Self {
-        SafeEthKzgContext {
+impl SafeSilaKzgContext {
+    fn new(ctx: constantine::SilaKzgContext<'static>) -> Self {
+        SafeSilaKzgContext {
             inner: UnsafeCell::new(ctx),
         }
     }
-    fn get(&self) -> &constantine::EthKzgContext<'static> {
+    fn get(&self) -> &constantine::SilaKzgContext<'static> {
         unsafe { &*self.inner.get() }
     }
 }
 
-static CONSTANTINE_CTX: OnceLock<Arc<SafeEthKzgContext>> = OnceLock::new();
+static CONSTANTINE_CTX: OnceLock<Arc<SafeSilaKzgContext>> = OnceLock::new();
 
-fn initialize_constantine_ctx() -> Arc<SafeEthKzgContext> {
+fn initialize_constantine_ctx() -> Arc<SafeSilaKzgContext> {
     let trusted_setup_file = get_root_dir().join("src").join("trusted_setup.txt");
-    let eth_kzg_context =
-        constantine::EthKzgContext::load_trusted_setup(&trusted_setup_file).unwrap();
-    Arc::new(SafeEthKzgContext::new(eth_kzg_context))
+    let sila_kzg_context =
+        constantine::SilaKzgContext::load_trusted_setup(&trusted_setup_file).unwrap();
+    Arc::new(SafeSilaKzgContext::new(sila_kzg_context))
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -95,7 +95,7 @@ fuzz_target!(|input: Input| {
     let proofs: Vec<[u8; c_kzg::BYTES_PER_PROOF]> =
         input.proofs.iter().map(|p| p.into_inner()).collect();
 
-    /* A second version for rust-eth-kzg */
+    /* A second version for rust-sila-kzg */
     let blobs_vec: Vec<[u8; c_kzg::BYTES_PER_BLOB]> =
         input.blobs.iter().map(|b| b.clone().into_inner()).collect();
     let blobs_refs: Vec<&[u8; c_kzg::BYTES_PER_BLOB]> = blobs_vec.iter().collect();

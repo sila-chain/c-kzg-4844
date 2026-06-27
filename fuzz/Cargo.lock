@@ -90,7 +90,7 @@ dependencies = [
  "constantine-sila-kzg",
  "lazy_static",
  "libfuzzer-sys",
- "rust_eth_kzg",
+ "rust_sila_kzg",
 ]
 
 [[package]]
@@ -176,7 +176,7 @@ dependencies = [
 [[package]]
 name = "eip4844"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-eth-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "ekzg-bls12-381",
  "ekzg-maybe-rayon",
@@ -200,7 +200,7 @@ checksum = "48c757948c5ede0e46177b7add2e67155f70e33c07fea8284df6576da70b3719"
 [[package]]
 name = "ekzg-bls12-381"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-eth-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "blst",
  "blstrs",
@@ -213,7 +213,7 @@ dependencies = [
 [[package]]
 name = "ekzg-erasure-codes"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-eth-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "ekzg-bls12-381",
  "ekzg-polynomial",
@@ -222,12 +222,12 @@ dependencies = [
 [[package]]
 name = "ekzg-maybe-rayon"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-eth-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 
 [[package]]
 name = "ekzg-multi-open"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-eth-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "ekzg-bls12-381",
  "ekzg-maybe-rayon",
@@ -238,7 +238,7 @@ dependencies = [
 [[package]]
 name = "ekzg-polynomial"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-eth-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "ekzg-bls12-381",
  "ekzg-maybe-rayon",
@@ -247,7 +247,7 @@ dependencies = [
 [[package]]
 name = "ekzg-serialization"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-eth-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "ekzg-bls12-381",
  "hex",
@@ -256,7 +256,7 @@ dependencies = [
 [[package]]
 name = "ekzg-single-open"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-eth-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "ekzg-bls12-381",
  "ekzg-polynomial",
@@ -266,7 +266,7 @@ dependencies = [
 [[package]]
 name = "ekzg-trusted-setup"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-eth-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "ekzg-bls12-381",
  "ekzg-serialization",
@@ -484,9 +484,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "rust_eth_kzg"
+name = "rust_sila_kzg"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-eth-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "eip4844",
  "ekzg-bls12-381",

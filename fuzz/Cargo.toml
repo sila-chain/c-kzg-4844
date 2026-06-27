@@ -17,7 +17,7 @@ c-kzg = { path = "..", features = ["arbitrary"] }
 constantine = { git = "https://github.com/mratsim/constantine", package = "constantine-sila-kzg" }
 lazy_static = "1.5"
 libfuzzer-sys = "0.4"
-rust_eth_kzg = { git = "https://github.com/crate-crypto/rust-eth-kzg" }
+rust_sila_kzg = { git = "https://github.com/crate-crypto/rust-sila-kzg" }
 
 # Prevent this from interfering with workspaces
 [workspace]

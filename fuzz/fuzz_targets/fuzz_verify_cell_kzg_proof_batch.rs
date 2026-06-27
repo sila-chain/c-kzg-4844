@@ -12,7 +12,7 @@ use c_kzg::BYTES_PER_PROOF;
 use c_kzg::{Bytes48, Cell};
 use lazy_static::lazy_static;
 use libfuzzer_sys::fuzz_target;
-use rust_eth_kzg::DASContext;
+use rust_sila_kzg::DASContext;
 use std::env;
 use std::path::PathBuf;
 
