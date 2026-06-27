@@ -59,7 +59,7 @@ function transformTrustedSetupJson(filePath) {
 
 /**
  * Gets location for trusted setup file. Uses user provided location first. If
- * one is not provided then defaults to the official Ethereum mainnet setup from
+ * one is not provided then defaults to the official Sila mainnet setup from
  * the KZG ceremony.
  *
  * @param {string} filePath - User provided filePath to check for trusted setup

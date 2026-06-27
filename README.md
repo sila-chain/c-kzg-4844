@@ -1,14 +1,14 @@
 # C-KZG-4844
 
 A minimal implementation of the Polynomial Commitments API for
-[EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) and
-[EIP-7594](https://eips.ethereum.org/EIPS/eip-7594), written in C.
+[SIP-4844](https://sips.sila-chain.org/SIPS/sip-4844) and
+[SIP-7594](https://sips.sila-chain.org/SIPS/sip-7594), written in C.
 
 ## Bindings
 
 While the core implementation is in C, bindings are available for various
 high-level languages, providing convenient wrappers around C functions. These
-bindings are intended to be used by Ethereum clients to avoid re-implementation
+bindings are intended to be used by Sila clients to avoid re-implementation
 of crucial cryptographic functions.
 
 | Language | Link                                 |
@@ -32,7 +32,7 @@ and
 The aim is to align these functions as closely as possible with the
 specifications.
 
-For EIP-4844:
+For SIP-4844:
 
 - `blob_to_kzg_commitment`
 - `compute_kzg_proof`
@@ -41,7 +41,7 @@ For EIP-4844:
 - `verify_blob_kzg_proof`
 - `verify_blob_kzg_proof_batch`
 
-For EIP-7594:
+For SIP-7594:
 
 - `compute_cells`
 - `compute_cells_and_kzg_proofs`
@@ -91,8 +91,8 @@ C-KZG-4844 is not expected to be used outside the bindings.
 
 ### Audits
 
-C-KZG-4844's implementation for EIP-4844 was audited by [Sigma
-Prime](https://sigmaprime.io/) in 2023 and its implementation for EIP-7594 was
+C-KZG-4844's implementation for SIP-4844 was audited by [Sigma
+Prime](https://sigmaprime.io/) in 2023 and its implementation for SIP-7594 was
 audited by [zkSecurity](https://www.zksecurity.xyz) in 2025. You can find the
 corresponding audit reports in the [`audits`](./audits/) directory.
 

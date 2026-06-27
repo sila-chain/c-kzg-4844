@@ -572,7 +572,7 @@ C_KZG_RET load_trusted_setup_file(KZGSettings *out, FILE *in, uint64_t precomput
     }
 
     /* Read all of the g1 points in monomial form, byte by byte */
-    /* Note: this is last because it is an extension for EIP-7594 */
+    /* Note: this is last because it is an extension for SIP-7594 */
     for (size_t i = 0; i < NUM_G1_POINTS * BYTES_PER_G1; i++) {
         num_matches = fscanf(in, "%2hhx", &g1_monomial_bytes[i]);
         if (num_matches != 1) {

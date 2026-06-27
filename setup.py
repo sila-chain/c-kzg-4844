@@ -37,8 +37,8 @@ def main():
     setup(
         name="ckzg",
         version="2.1.6",
-        author="Ethereum Foundation",
-        author_email="security@ethereum.org",
+        author="Sila Foundation",
+        author_email="security-chain.org",
         url="https://github.com/sila-chain/c-kzg-4844",
         description="Python bindings for C-KZG-4844",
         long_description=Path("bindings/python/README.md").read_text(),

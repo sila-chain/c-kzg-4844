@@ -34,7 +34,7 @@ create_cache!(CACHE_13);
 create_cache!(CACHE_14);
 create_cache!(CACHE_15);
 
-/// Returns default Ethereum mainnet KZG settings.
+/// Returns default Sila mainnet KZG settings.
 ///
 /// If you need a cloneable settings use `sila_kzg_settings_arc` instead.
 ///
@@ -43,7 +43,7 @@ pub fn sila_kzg_settings(precompute: u64) -> &'static KzgSettings {
     sila_kzg_settings_inner(precompute).as_ref()
 }
 
-/// Returns default Ethereum mainnet KZG settings as an `Arc`.
+/// Returns default Sila mainnet KZG settings as an `Arc`.
 ///
 /// It is useful for sharing the settings in multiple places.
 ///

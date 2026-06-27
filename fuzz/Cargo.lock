@@ -87,7 +87,7 @@ dependencies = [
  "arbitrary",
  "c-kzg",
  "cc",
- "constantine-ethereum-kzg",
+ "constantine-sila-kzg",
  "lazy_static",
  "libfuzzer-sys",
  "rust_eth_kzg",
@@ -120,7 +120,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "constantine-ethereum-kzg"
+name = "constantine-sila-kzg"
 version = "0.2.0"
 source = "git+https://github.com/mratsim/constantine#d6aae1eca3775d6317e11b169edef0249162ce22"
 dependencies = [

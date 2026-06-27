@@ -672,7 +672,7 @@ var (
 	computeVerifyCellKZGProofBatchChallengeTests = filepath.Join(testDir, "compute_verify_cell_kzg_proof_batch_challenge/*/*/*")
 )
 
-/* Test the EIP-4844 challenge computation */
+/* Test the SIP-4844 challenge computation */
 func TestComputeChallenge(t *testing.T) {
 	type Test struct {
 		Input struct {
@@ -722,7 +722,7 @@ func TestComputeChallenge(t *testing.T) {
 	}
 }
 
-/* Test the EIP-7594 challenge computation */
+/* Test the SIP-7594 challenge computation */
 func TestComputeVerifyCellKZGProofBatchChallenge(t *testing.T) {
 	type Test struct {
 		Input struct {
