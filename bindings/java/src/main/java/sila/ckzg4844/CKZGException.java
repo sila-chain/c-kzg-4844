@@ -1,6 +1,6 @@
-package ethereum.ckzg4844;
+package sila.ckzg4844;
 
-import static ethereum.ckzg4844.CKZGException.CKZGError.fromErrorCode;
+import static sila.ckzg4844.CKZGException.CKZGError.fromErrorCode;
 
 import java.util.Arrays;
 

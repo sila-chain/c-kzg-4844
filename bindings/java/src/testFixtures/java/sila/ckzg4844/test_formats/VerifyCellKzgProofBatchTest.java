@@ -1,7 +1,7 @@
-package ethereum.ckzg4844.test_formats;
+package sila.ckzg4844.test_formats;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import ethereum.ckzg4844.TestUtils;
+import sila.ckzg4844.TestUtils;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.apache.tuweni.bytes.Bytes;

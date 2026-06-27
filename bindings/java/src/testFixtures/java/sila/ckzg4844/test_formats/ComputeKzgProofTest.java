@@ -1,6 +1,6 @@
-package ethereum.ckzg4844.test_formats;
+package sila.ckzg4844.test_formats;
 
-import ethereum.ckzg4844.ProofAndY;
+import sila.ckzg4844.ProofAndY;
 import java.util.List;
 import org.apache.tuweni.bytes.Bytes;
 

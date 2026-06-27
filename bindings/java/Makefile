@@ -42,7 +42,7 @@ else
   GRADLE_COMMAND=./gradlew
 endif
 
-LIBRARY_FOLDER=src/main/resources/ethereum/ckzg4844/lib/${OS_ARCH}
+LIBRARY_FOLDER=src/main/resources/sila/ckzg4844/lib/${OS_ARCH}
 
 ifeq ($(JAVA_HOME),)
   $(error JAVA_HOME is not set and autodetection failed)

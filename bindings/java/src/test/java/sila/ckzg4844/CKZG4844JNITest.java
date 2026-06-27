@@ -1,10 +1,10 @@
-package ethereum.ckzg4844;
+package sila.ckzg4844;
 
-import static ethereum.ckzg4844.CKZG4844JNI.BYTES_PER_CELL;
-import static ethereum.ckzg4844.CKZG4844JNI.BYTES_PER_COMMITMENT;
-import static ethereum.ckzg4844.CKZG4844JNI.BYTES_PER_PROOF;
-import static ethereum.ckzg4844.CKZG4844JNI.CELLS_PER_EXT_BLOB;
-import static ethereum.ckzg4844.CKZGException.CKZGError.C_KZG_BADARGS;
+import static sila.ckzg4844.CKZG4844JNI.BYTES_PER_CELL;
+import static sila.ckzg4844.CKZG4844JNI.BYTES_PER_COMMITMENT;
+import static sila.ckzg4844.CKZG4844JNI.BYTES_PER_PROOF;
+import static sila.ckzg4844.CKZG4844JNI.CELLS_PER_EXT_BLOB;
+import static sila.ckzg4844.CKZGException.CKZGError.C_KZG_BADARGS;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import ethereum.ckzg4844.test_formats.*;
+import sila.ckzg4844.test_formats.*;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;

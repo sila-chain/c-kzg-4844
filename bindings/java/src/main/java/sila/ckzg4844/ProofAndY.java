@@ -1,4 +1,4 @@
-package ethereum.ckzg4844;
+package sila.ckzg4844;
 
 public class ProofAndY {
   private final byte[] proof;

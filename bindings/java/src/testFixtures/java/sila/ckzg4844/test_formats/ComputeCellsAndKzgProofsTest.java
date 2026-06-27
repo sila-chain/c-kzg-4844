@@ -1,30 +1,17 @@
-package ethereum.ckzg4844.test_formats;
+package sila.ckzg4844.test_formats;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import ethereum.ckzg4844.CellsAndProofs;
-import ethereum.ckzg4844.TestUtils;
+import sila.ckzg4844.CellsAndProofs;
+import sila.ckzg4844.TestUtils;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.apache.tuweni.bytes.Bytes;
 
-public class RecoverCellsAndKzgProofsTest {
+public class ComputeCellsAndKzgProofsTest {
   public static class Input {
-    @JsonProperty("cell_indices")
-    private List<Long> cellIndices;
+    private String blob;
 
-    private List<String> cells;
-
-    public long[] getCellIndices() {
-      return cellIndices.stream().mapToLong(Long::longValue).toArray();
-    }
-
-    public byte[] getCells() {
-      return TestUtils.flatten(
-          cells.stream()
-              .map(Bytes::fromHexString)
-              .map(Bytes::toArrayUnsafe)
-              .collect(Collectors.toList())
-              .toArray(byte[][]::new));
+    public byte[] getBlob() {
+      return Bytes.fromHexString(blob).toArrayUnsafe();
     }
   }
 

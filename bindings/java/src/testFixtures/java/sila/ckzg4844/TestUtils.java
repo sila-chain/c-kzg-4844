@@ -1,8 +1,8 @@
-package ethereum.ckzg4844;
+package sila.ckzg4844;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import ethereum.ckzg4844.test_formats.*;
+import sila.ckzg4844.test_formats.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
