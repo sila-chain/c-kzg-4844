@@ -17,7 +17,7 @@ nimble install stew
 Install via nimble:
 
 ```
-nimble install https://github.com/ethereum/c-kzg-4844
+nimble install https://github.com/sila-chain/c-kzg-4844
 ```
 
 ## Tests

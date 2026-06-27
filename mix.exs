@@ -17,7 +17,7 @@ defmodule CKZG.MixProject do
       app: :ckzg,
       compilers: [:elixir_make] ++ Mix.compilers(),
       make_precompiler_url:
-        "https://github.com/ethereum/c-kzg-4844/releases/download/v#{@version}/@{artefact_filename}",
+        "https://github.com/sila-chain/c-kzg-4844/releases/download/v#{@version}/@{artefact_filename}",
       make_precompiler_filename: "nif",
       make_precompiler: {:nif, CCPrecompiler},
       make_precompiler_priv_paths: ["ckzg_nif.*"],

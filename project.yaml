@@ -1,6 +1,6 @@
 language: rust
-homepage: "https://github.com/ethereum/c-kzg-4844"
-main_repo: "https://github.com/ethereum/c-kzg-4844.git"
+homepage: "https://github.com/sila-chain/c-kzg-4844"
+main_repo: "https://github.com/sila-chain/c-kzg-4844.git"
 primary_contact: "security@ethereum.org"
 sanitizers:
   - address

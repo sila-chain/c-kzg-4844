@@ -13,7 +13,7 @@ def download_latest_tests(output_dir):
     """
     Download the latest KZG reference tests (including pre-releases).
     """
-    with urllib.request.urlopen("https://api.github.com/repos/ethereum/consensus-spec-tests/releases") as response:
+    with urllib.request.urlopen("https://api.github.com/repos/sila-chain/Sila-Consensus-Spec-Tests/releases") as response:
         releases = json.loads(response.read().decode())
 
     for asset in releases[0]["assets"]:
