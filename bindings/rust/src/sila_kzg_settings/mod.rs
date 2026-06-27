@@ -36,11 +36,11 @@ create_cache!(CACHE_15);
 
 /// Returns default Ethereum mainnet KZG settings.
 ///
-/// If you need a cloneable settings use `ethereum_kzg_settings_arc` instead.
+/// If you need a cloneable settings use `sila_kzg_settings_arc` instead.
 ///
 /// Note: Precompute values 0-15 (inclusive) are supported.
-pub fn ethereum_kzg_settings(precompute: u64) -> &'static KzgSettings {
-    ethereum_kzg_settings_inner(precompute).as_ref()
+pub fn sila_kzg_settings(precompute: u64) -> &'static KzgSettings {
+    sila_kzg_settings_inner(precompute).as_ref()
 }
 
 /// Returns default Ethereum mainnet KZG settings as an `Arc`.
@@ -48,11 +48,11 @@ pub fn ethereum_kzg_settings(precompute: u64) -> &'static KzgSettings {
 /// It is useful for sharing the settings in multiple places.
 ///
 /// Note: Precompute values 0-15 (inclusive) are supported.
-pub fn ethereum_kzg_settings_arc(precompute: u64) -> Arc<KzgSettings> {
-    ethereum_kzg_settings_inner(precompute).clone()
+pub fn sila_kzg_settings_arc(precompute: u64) -> Arc<KzgSettings> {
+    sila_kzg_settings_inner(precompute).clone()
 }
 
-fn ethereum_kzg_settings_inner(precompute: u64) -> &'static Arc<KzgSettings> {
+fn sila_kzg_settings_inner(precompute: u64) -> &'static Arc<KzgSettings> {
     let cache_box = match precompute {
         0 => &CACHE_0,
         1 => &CACHE_1,
@@ -99,7 +99,7 @@ mod tests {
         let ts_settings =
             KzgSettings::load_trusted_setup_file(Path::new("src/trusted_setup.txt"), precompute)
                 .unwrap();
-        let eth_settings = ethereum_kzg_settings(precompute);
+        let eth_settings = sila_kzg_settings(precompute);
         let blob = Blob::new([1u8; BYTES_PER_BLOB]);
 
         // generate commitment

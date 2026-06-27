@@ -20,12 +20,12 @@ build = "bindings/rust/build.rs"
 path = "bindings/rust/src/lib.rs"
 
 [features]
-default = ["std", "portable", "ethereum_kzg_settings"]
+default = ["std", "portable", "sila_kzg_settings"]
 std = ["hex/std", "libc/std", "serde?/std", "once_cell?/std"]
 serde = ["dep:serde"]
 arbitrary = ["dep:arbitrary"]
 generate-bindings = ["dep:bindgen"]
-ethereum_kzg_settings = ["dep:once_cell"]
+sila_kzg_settings = ["dep:once_cell"]
 
 # Enable this feature when running the tests to generate the fuzzing corpus.
 # This converts the yaml reference tests into a binary form for the fuzzer.
