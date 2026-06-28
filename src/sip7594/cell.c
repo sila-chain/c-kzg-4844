@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "eip7594/cell.h"
+#include "sip7594/cell.h"
 #include "common/bytes.h"
 
 #include <stdio.h> /* For printf */

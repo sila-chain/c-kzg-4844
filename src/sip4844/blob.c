@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "eip4844/blob.h"
+#include "sip4844/blob.h"
 #include "common/bytes.h"
 
 #include <stdio.h> /* For printf */

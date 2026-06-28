@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include "eip4844/eip4844.h"
+#include "sip4844/sip4844.h"
 #include "common/alloc.h"
 #include "common/ec.h"
 #include "common/fr.h"

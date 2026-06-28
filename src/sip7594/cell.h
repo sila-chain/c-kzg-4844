@@ -16,7 +16,7 @@
 
 #pragma once
 
-#include "eip4844/blob.h"
+#include "sip4844/blob.h"
 
 #include <inttypes.h> /* For uint8_t */
 

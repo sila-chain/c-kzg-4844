@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-#include "eip7594/fk20.h"
+#include "sip7594/fk20.h"
 #include "common/alloc.h"
 #include "common/lincomb.h"
-#include "eip7594/cell.h"
-#include "eip7594/fft.h"
+#include "sip7594/cell.h"
+#include "sip7594/fft.h"
 
 #include <assert.h> /* For assert */
 #include <stdlib.h> /* For NULL */

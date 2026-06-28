@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-#include "eip7594/eip7594.h"
+#include "sip7594/sip7594.h"
 #include "common/alloc.h"
 #include "common/fr.h"
 #include "common/lincomb.h"
 #include "common/utils.h"
-#include "eip7594/fft.h"
-#include "eip7594/fk20.h"
-#include "eip7594/poly.h"
-#include "eip7594/recovery.h"
+#include "sip7594/fft.h"
+#include "sip7594/fk20.h"
+#include "sip7594/poly.h"
+#include "sip7594/recovery.h"
 
 #include <assert.h> /* For assert */
 #include <string.h> /* For memcpy & strlen */

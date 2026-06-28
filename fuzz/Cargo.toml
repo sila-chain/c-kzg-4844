@@ -14,10 +14,10 @@ cc = "1.2"
 [dependencies]
 arbitrary = "1.4"
 c-kzg = { path = "..", features = ["arbitrary"] }
-constantine = { git = "https://github.com/mratsim/constantine", package = "constantine-sila-kzg" }
+constantine = { git = "https://github.com/sila-chain/constantine", package = "constantine-sila-kzg" }
 lazy_static = "1.5"
 libfuzzer-sys = "0.4"
-rust_sila_kzg = { git = "https://github.com/crate-crypto/rust-sila-kzg" }
+rust_sila_kzg = { git = "https://github.com/sila-chain/rust-sila-kzg" }
 
 # Prevent this from interfering with workspaces
 [workspace]

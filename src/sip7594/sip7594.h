@@ -19,9 +19,9 @@
 #include "common/bytes.h"
 #include "common/fr.h"
 #include "common/ret.h"
-#include "eip4844/blob.h"
-#include "eip4844/eip4844.h"
-#include "eip7594/cell.h"
+#include "sip4844/blob.h"
+#include "sip4844/sip4844.h"
+#include "sip7594/cell.h"
 #include "setup/settings.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////

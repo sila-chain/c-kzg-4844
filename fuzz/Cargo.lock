@@ -114,7 +114,7 @@ checksum = "2fd1289c04a9ea8cb22300a459a72a385d7c73d3259e2ed7dcb2af674838cfa9"
 [[package]]
 name = "constantine-core"
 version = "0.2.0"
-source = "git+https://github.com/mratsim/constantine#d6aae1eca3775d6317e11b169edef0249162ce22"
+source = "git+https://github.com/sila-chain/constantine#d6aae1eca3775d6317e11b169edef0249162ce22"
 dependencies = [
  "constantine-sys",
 ]
@@ -122,7 +122,7 @@ dependencies = [
 [[package]]
 name = "constantine-sila-kzg"
 version = "0.2.0"
-source = "git+https://github.com/mratsim/constantine#d6aae1eca3775d6317e11b169edef0249162ce22"
+source = "git+https://github.com/sila-chain/constantine#d6aae1eca3775d6317e11b169edef0249162ce22"
 dependencies = [
  "constantine-core",
  "constantine-sys",
@@ -131,7 +131,7 @@ dependencies = [
 [[package]]
 name = "constantine-sys"
 version = "0.2.0"
-source = "git+https://github.com/mratsim/constantine#d6aae1eca3775d6317e11b169edef0249162ce22"
+source = "git+https://github.com/sila-chain/constantine#d6aae1eca3775d6317e11b169edef0249162ce22"
 
 [[package]]
 name = "cpufeatures"
@@ -174,9 +174,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "eip4844"
+name = "sip4844"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/sila-chain/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "ekzg-bls12-381",
  "ekzg-maybe-rayon",
@@ -200,7 +200,7 @@ checksum = "48c757948c5ede0e46177b7add2e67155f70e33c07fea8284df6576da70b3719"
 [[package]]
 name = "ekzg-bls12-381"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/sila-chain/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "blst",
  "blstrs",
@@ -213,7 +213,7 @@ dependencies = [
 [[package]]
 name = "ekzg-erasure-codes"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/sila-chain/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "ekzg-bls12-381",
  "ekzg-polynomial",
@@ -222,12 +222,12 @@ dependencies = [
 [[package]]
 name = "ekzg-maybe-rayon"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/sila-chain/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 
 [[package]]
 name = "ekzg-multi-open"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/sila-chain/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "ekzg-bls12-381",
  "ekzg-maybe-rayon",
@@ -238,7 +238,7 @@ dependencies = [
 [[package]]
 name = "ekzg-polynomial"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/sila-chain/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "ekzg-bls12-381",
  "ekzg-maybe-rayon",
@@ -247,7 +247,7 @@ dependencies = [
 [[package]]
 name = "ekzg-serialization"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/sila-chain/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "ekzg-bls12-381",
  "hex",
@@ -256,7 +256,7 @@ dependencies = [
 [[package]]
 name = "ekzg-single-open"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/sila-chain/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "ekzg-bls12-381",
  "ekzg-polynomial",
@@ -266,7 +266,7 @@ dependencies = [
 [[package]]
 name = "ekzg-trusted-setup"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/sila-chain/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
  "ekzg-bls12-381",
  "ekzg-serialization",
@@ -486,9 +486,9 @@ dependencies = [
 [[package]]
 name = "rust_sila_kzg"
 version = "0.9.1"
-source = "git+https://github.com/crate-crypto/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
+source = "git+https://github.com/sila-chain/rust-sila-kzg#079b75d2165af093371dc114b482ee17dc467354"
 dependencies = [
- "eip4844",
+ "sip4844",
  "ekzg-bls12-381",
  "ekzg-erasure-codes",
  "ekzg-multi-open",

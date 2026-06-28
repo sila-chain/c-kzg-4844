@@ -35,8 +35,8 @@ build: install clean
 	@cp ../../src/ckzg.c deps/c-kzg
 	@cp ../../src/ckzg.h deps/c-kzg
 	@cp -r ../../src/common deps/c-kzg
-	@cp -r ../../src/eip4844 deps/c-kzg
-	@cp -r ../../src/eip7594 deps/c-kzg
+	@cp -r ../../src/sip4844 deps/c-kzg
+	@cp -r ../../src/sip7594 deps/c-kzg
 	@cp -r ../../src/setup deps/c-kzg
 	@# Copy trusted setup
 	@cp ../../src/trusted_setup.txt deps/c-kzg

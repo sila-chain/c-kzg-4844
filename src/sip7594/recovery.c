@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-#include "eip7594/recovery.h"
+#include "sip7594/recovery.h"
 #include "common/alloc.h"
 #include "common/fr.h"
 #include "common/utils.h"
-#include "eip7594/cell.h"
-#include "eip7594/fft.h"
+#include "sip7594/cell.h"
+#include "sip7594/fft.h"
 
 #include <assert.h> /* For assert */
 #include <stdlib.h> /* For NULL */
