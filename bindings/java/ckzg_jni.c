@@ -24,7 +24,7 @@ void throw_exception(JNIEnv *env, const char *message) {
 void throw_c_kzg_exception(JNIEnv *env, C_KZG_RET error_code,
                            const char *message) {
   jclass exception_class =
-      (*env)->FindClass(env, "ethereum/ckzg4844/CKZGException");
+      (*env)->FindClass(env, "sila/ckzg4844/CKZGException");
   jstring error_message = (*env)->NewStringUTF(env, message);
   jmethodID exception_constructor = (*env)->GetMethodID(
       env, exception_class, "<init>", "(ILjava/lang/String;)V");
@@ -50,7 +50,7 @@ KZGSettings *allocate_settings(JNIEnv *env) {
 }
 
 JNIEXPORT void JNICALL
-Java_ethereum_ckzg4844_CKZG4844JNI_loadTrustedSetup__Ljava_lang_String_2J(
+Java_sila_ckzg4844_CKZG4844JNI_loadTrustedSetup__Ljava_lang_String_2J(
     JNIEnv *env, jclass thisCls, jstring file, jlong precompute) {
   if (settings) {
     throw_exception(
@@ -88,7 +88,7 @@ Java_ethereum_ckzg4844_CKZG4844JNI_loadTrustedSetup__Ljava_lang_String_2J(
 }
 
 JNIEXPORT void JNICALL
-Java_ethereum_ckzg4844_CKZG4844JNI_loadTrustedSetup___3B_3B_3BJ(
+Java_sila_ckzg4844_CKZG4844JNI_loadTrustedSetup___3B_3B_3BJ(
     JNIEnv *env, jclass thisCls, jbyteArray g1MonomialBytes,
     jbyteArray g1LagrangeBytes, jbyteArray g2MonomialBytes, jlong precompute) {
   if (settings) {
@@ -136,7 +136,7 @@ Java_ethereum_ckzg4844_CKZG4844JNI_loadTrustedSetup___3B_3B_3BJ(
   }
 }
 
-JNIEXPORT void JNICALL Java_ethereum_ckzg4844_CKZG4844JNI_freeTrustedSetup(
+JNIEXPORT void JNICALL Java_sila_ckzg4844_CKZG4844JNI_freeTrustedSetup(
     JNIEnv *env, jclass thisCls) {
   if (settings == NULL) {
     throw_exception(env, TRUSTED_SETUP_NOT_LOADED);
@@ -146,7 +146,7 @@ JNIEXPORT void JNICALL Java_ethereum_ckzg4844_CKZG4844JNI_freeTrustedSetup(
 }
 
 JNIEXPORT jbyteArray JNICALL
-Java_ethereum_ckzg4844_CKZG4844JNI_blobToKzgCommitment(JNIEnv *env,
+Java_sila_ckzg4844_CKZG4844JNI_blobToKzgCommitment(JNIEnv *env,
                                                        jclass thisCls,
                                                        jbyteArray blob) {
   if (settings == NULL) {
@@ -182,7 +182,7 @@ Java_ethereum_ckzg4844_CKZG4844JNI_blobToKzgCommitment(JNIEnv *env,
   return commitment;
 }
 
-JNIEXPORT jobject JNICALL Java_ethereum_ckzg4844_CKZG4844JNI_computeKzgProof(
+JNIEXPORT jobject JNICALL Java_sila_ckzg4844_CKZG4844JNI_computeKzgProof(
     JNIEnv *env, jclass thisCls, jbyteArray blob, jbyteArray z_bytes) {
   if (settings == NULL) {
     throw_exception(env, TRUSTED_SETUP_NOT_LOADED);
@@ -230,7 +230,7 @@ JNIEXPORT jobject JNICALL Java_ethereum_ckzg4844_CKZG4844JNI_computeKzgProof(
   }
 
   jclass proof_and_y_class =
-      (*env)->FindClass(env, "ethereum/ckzg4844/ProofAndY");
+      (*env)->FindClass(env, "sila/ckzg4844/ProofAndY");
   if (proof_and_y_class == NULL) {
     throw_exception(env, "Failed to find ProofAndY class.");
     return NULL;
@@ -254,7 +254,7 @@ JNIEXPORT jobject JNICALL Java_ethereum_ckzg4844_CKZG4844JNI_computeKzgProof(
 }
 
 JNIEXPORT jbyteArray JNICALL
-Java_ethereum_ckzg4844_CKZG4844JNI_computeBlobKzgProof(
+Java_sila_ckzg4844_CKZG4844JNI_computeBlobKzgProof(
     JNIEnv *env, jclass thisCls, jbyteArray blob, jbyteArray commitment_bytes) {
   if (settings == NULL) {
     throw_exception(env, TRUSTED_SETUP_NOT_LOADED);
@@ -301,7 +301,7 @@ Java_ethereum_ckzg4844_CKZG4844JNI_computeBlobKzgProof(
   return proof;
 }
 
-JNIEXPORT jboolean JNICALL Java_ethereum_ckzg4844_CKZG4844JNI_verifyKzgProof(
+JNIEXPORT jboolean JNICALL Java_sila_ckzg4844_CKZG4844JNI_verifyKzgProof(
     JNIEnv *env, jclass thisCls, jbyteArray commitment_bytes,
     jbyteArray z_bytes, jbyteArray y_bytes, jbyteArray proof_bytes) {
   if (settings == NULL) {
@@ -367,7 +367,7 @@ JNIEXPORT jboolean JNICALL Java_ethereum_ckzg4844_CKZG4844JNI_verifyKzgProof(
 }
 
 JNIEXPORT jboolean JNICALL
-Java_ethereum_ckzg4844_CKZG4844JNI_verifyBlobKzgProof(
+Java_sila_ckzg4844_CKZG4844JNI_verifyBlobKzgProof(
     JNIEnv *env, jclass thisCls, jbyteArray blob, jbyteArray commitment_bytes,
     jbyteArray proof_bytes) {
   if (settings == NULL) {
@@ -423,7 +423,7 @@ Java_ethereum_ckzg4844_CKZG4844JNI_verifyBlobKzgProof(
 }
 
 JNIEXPORT jboolean JNICALL
-Java_ethereum_ckzg4844_CKZG4844JNI_verifyBlobKzgProofBatch(
+Java_sila_ckzg4844_CKZG4844JNI_verifyBlobKzgProofBatch(
     JNIEnv *env, jclass thisCls, jbyteArray blobs, jbyteArray commitments_bytes,
     jbyteArray proofs_bytes, jlong count) {
   if (settings == NULL) {
@@ -482,7 +482,7 @@ Java_ethereum_ckzg4844_CKZG4844JNI_verifyBlobKzgProofBatch(
   return (jboolean)out;
 }
 
-JNIEXPORT jobject JNICALL Java_ethereum_ckzg4844_CKZG4844JNI_computeCells(
+JNIEXPORT jobject JNICALL Java_sila_ckzg4844_CKZG4844JNI_computeCells(
     JNIEnv *env, jclass thisCls, jbyteArray blob) {
   if (settings == NULL) {
     throw_exception(env, TRUSTED_SETUP_NOT_LOADED);
@@ -519,7 +519,7 @@ JNIEXPORT jobject JNICALL Java_ethereum_ckzg4844_CKZG4844JNI_computeCells(
 }
 
 JNIEXPORT jobject JNICALL
-Java_ethereum_ckzg4844_CKZG4844JNI_computeCellsAndKzgProofs(JNIEnv *env,
+Java_sila_ckzg4844_CKZG4844JNI_computeCellsAndKzgProofs(JNIEnv *env,
                                                             jclass thisCls,
                                                             jbyteArray blob) {
   if (settings == NULL) {
@@ -560,7 +560,7 @@ Java_ethereum_ckzg4844_CKZG4844JNI_computeCellsAndKzgProofs(JNIEnv *env,
   }
 
   jclass caps_class =
-      (*env)->FindClass(env, "ethereum/ckzg4844/CellsAndProofs");
+      (*env)->FindClass(env, "sila/ckzg4844/CellsAndProofs");
   if (caps_class == NULL) {
     throw_exception(env, "Failed to find CellsAndProofs class.");
     return NULL;
@@ -587,7 +587,7 @@ Java_ethereum_ckzg4844_CKZG4844JNI_computeCellsAndKzgProofs(JNIEnv *env,
 }
 
 JNIEXPORT jobject JNICALL
-Java_ethereum_ckzg4844_CKZG4844JNI_recoverCellsAndKzgProofs(
+Java_sila_ckzg4844_CKZG4844JNI_recoverCellsAndKzgProofs(
     JNIEnv *env, jclass thisCls, jlongArray cell_indices, jbyteArray cells) {
   if (settings == NULL) {
     throw_exception(env, TRUSTED_SETUP_NOT_LOADED);
@@ -634,7 +634,7 @@ Java_ethereum_ckzg4844_CKZG4844JNI_recoverCellsAndKzgProofs(
   }
 
   jclass caps_class =
-      (*env)->FindClass(env, "ethereum/ckzg4844/CellsAndProofs");
+      (*env)->FindClass(env, "sila/ckzg4844/CellsAndProofs");
   if (caps_class == NULL) {
     throw_exception(env, "Failed to find CellsAndProofs class.");
     return NULL;
@@ -661,7 +661,7 @@ Java_ethereum_ckzg4844_CKZG4844JNI_recoverCellsAndKzgProofs(
 }
 
 JNIEXPORT jboolean JNICALL
-Java_ethereum_ckzg4844_CKZG4844JNI_verifyCellKzgProofBatch(
+Java_sila_ckzg4844_CKZG4844JNI_verifyCellKzgProofBatch(
     JNIEnv *env, jclass thisCls, jbyteArray commitments_bytes,
     jlongArray cell_indices, jbyteArray cells, jbyteArray proofs_bytes) {
   if (settings == NULL) {

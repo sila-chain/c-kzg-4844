@@ -1,6 +1,6 @@
 /**
  * The public interface of this module exposes the functions as specified by
- * https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/polynomial-commitments.md#kzg
+ * https://github.com/sila/consensus-specs/blob/dev/specs/sila_deneb/polynomial-commitments.md#kzg
  */
 export type Bytes32 = Uint8Array; // 32 bytes
 export type Bytes48 = Uint8Array; // 48 bytes
@@ -36,12 +36,12 @@ export const CELLS_PER_EXT_BLOB: number;
  * ".txt" extension.
  *
  * Uses user provided location first. If one is not provided then defaults to
- * the official Ethereum mainnet setup from the KZG ceremony. Should only be
- * used for cases where the Ethereum official mainnet KZG setup is acceptable.
+ * the official Sila sila-mainnet setup from the KZG ceremony. Should only be
+ * used for cases where the Sila official sila-mainnet KZG setup is acceptable.
  *
  * @param {number} precompute
  * @param {string | undefined} filePath
- * @default - If no string is passed the default trusted setup from the Ethereum KZG ceremony is used
+ * @default - If no string is passed the default trusted setup from the Sila KZG ceremony is used
  *
  * @throws {TypeError} - Non-String input
  * @throws {Error} - For all other errors. See error message for more info

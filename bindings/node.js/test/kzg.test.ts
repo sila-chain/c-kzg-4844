@@ -13,7 +13,7 @@ interface TestMeta<I extends Record<string, any>, O extends boolean | string | s
 import kzg from "../lib/kzg";
 import type {ProofResult} from "../lib/kzg";
 const {
-  // EIP-4844
+  // SIP-4844
   loadTrustedSetup,
   blobToKzgCommitment,
   computeKzgProof,
@@ -25,7 +25,7 @@ const {
   BYTES_PER_COMMITMENT,
   BYTES_PER_PROOF,
 
-  // EIP-7594
+  // SIP-7594
   computeCells,
   computeCellsAndKzgProofs,
   verifyCellKzgProofBatch,

@@ -12,7 +12,7 @@ fn loadSettings() !ckzg.Settings {
 }
 
 fn collectCases(io: std.Io, alloc: std.mem.Allocator, suite: []const u8) ![][]const u8 {
-    const base = try std.fmt.allocPrint(alloc, "tests/{s}/kzg-mainnet", .{suite});
+    const base = try std.fmt.allocPrint(alloc, "tests/{s}/kzg-sila-mainnet", .{suite});
 
     var dir = try std.Io.Dir.cwd().openDir(io, base, .{ .iterate = true });
     defer dir.close(io);
@@ -41,7 +41,7 @@ fn hexToStruct(comptime T: type, hex: []const u8) !T {
     return v;
 }
 
-// EIP-4844
+// SIP-4844
 
 test "blob_to_kzg_commitment" {
     var s = try loadSettings();
@@ -239,7 +239,7 @@ test "verify_blob_kzg_proof_batch" {
     }
 }
 
-// EIP-7594
+// SIP-7594
 
 test "compute_cells" {
     var s = try loadSettings();

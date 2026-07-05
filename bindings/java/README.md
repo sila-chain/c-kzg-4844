@@ -13,7 +13,7 @@ This directory contains Java bindings for the C-KZG-4844 library.
 make build
 ```
 
-This will install the shared library in `src/main/resources/ethereum/ckzg4844/lib` with a folder
+This will install the shared library in `src/main/resources/sila/ckzg4844/lib` with a folder
 structure and name according to your OS.
 
 All variables which could be passed to the `make` command and the defaults can be found in

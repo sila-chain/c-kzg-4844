@@ -10,8 +10,8 @@ extern crate blst;
 
 mod bindings;
 
-#[cfg(feature = "ethereum_kzg_settings")]
-mod ethereum_kzg_settings;
+#[cfg(feature = "sila_kzg_settings")]
+mod sila_kzg_settings;
 
 // Expose relevant types with idiomatic names.
 pub use bindings::{
@@ -20,8 +20,8 @@ pub use bindings::{
 };
 
 // Expose the default settings.
-#[cfg(feature = "ethereum_kzg_settings")]
-pub use ethereum_kzg_settings::{ethereum_kzg_settings, ethereum_kzg_settings_arc};
+#[cfg(feature = "sila_kzg_settings")]
+pub use sila_kzg_settings::{sila_kzg_settings, sila_kzg_settings_arc};
 
 // Expose the constants.
 pub use bindings::{

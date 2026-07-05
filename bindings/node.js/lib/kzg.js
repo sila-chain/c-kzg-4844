@@ -1,6 +1,6 @@
 /**
  * The public interface of this module exposes the functions as specified by
- * https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/polynomial-commitments.md#kzg
+ * https://github.com/sila/consensus-specs/blob/dev/specs/sila_deneb/polynomial-commitments.md#kzg
  */
 const fs = require("fs");
 const path = require("path");
@@ -59,7 +59,7 @@ function transformTrustedSetupJson(filePath) {
 
 /**
  * Gets location for trusted setup file. Uses user provided location first. If
- * one is not provided then defaults to the official Ethereum mainnet setup from
+ * one is not provided then defaults to the official Sila sila-mainnet setup from
  * the KZG ceremony.
  *
  * @param {string} filePath - User provided filePath to check for trusted setup

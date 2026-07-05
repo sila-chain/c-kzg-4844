@@ -95,7 +95,7 @@ fuzz_target!(|input: Input| {
     let proofs: Vec<[u8; c_kzg::BYTES_PER_PROOF]> =
         input.proofs.iter().map(|p| p.into_inner()).collect();
 
-    /* A second version for rust-eth-kzg */
+    /* A second version for rust-sil-kzg */
     let blobs_vec: Vec<[u8; c_kzg::BYTES_PER_BLOB]> =
         input.blobs.iter().map(|b| b.clone().into_inner()).collect();
     let blobs_refs: Vec<&[u8; c_kzg::BYTES_PER_BLOB]> = blobs_vec.iter().collect();
