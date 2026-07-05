@@ -27,9 +27,9 @@ of crucial cryptographic functions.
 
 The C-KZG-4844 library provides implementations of the public KZG functions
 that are specified in the Polynomial Commitments API for
-[SilaDeneb](https://github.com/sila/consensus-specs/blob/dev/specs/sila_deneb/polynomial-commitments.md)
+[SilaDeneb](https://github.com/sila-chain/consensus-specs/blob/dev/specs/sila_deneb/polynomial-commitments.md)
 and
-[SilaFulu](https://github.com/sila/consensus-specs/blob/dev/specs/sila_fulu/polynomial-commitments-sampling.md).
+[SilaFulu](https://github.com/sila-chain/consensus-specs/blob/dev/specs/sila_fulu/polynomial-commitments-sampling.md).
 The aim is to align these functions as closely as possible with the
 specifications.
 
@@ -63,7 +63,7 @@ executed once during the initialization process. As the name suggests, the
 ### Tests
 
 All bindings are tested against the KZG reference tests, which are defined in
-the [consensus-spec-tests](https://github.com/sila/consensus-spec-tests)
+the [consensus-spec-tests](https://github.com/sila-chain/consensus-spec-tests)
 repository. Additionally, a suite of unit tests for internal C functions is
 located [here](src/test/tests.c).
 

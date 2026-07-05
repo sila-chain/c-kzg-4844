@@ -39,7 +39,7 @@ def main():
         version="2.1.7",
         author="Sila Foundation",
         author_email="security@sila.org",
-        url="https://github.com/sila/c-kzg-4844",
+        url="https://github.com/sila-chain/c-kzg-4844",
         description="Python bindings for C-KZG-4844",
         long_description=Path("bindings/python/README.md").read_text(),
         long_description_content_type="text/markdown",

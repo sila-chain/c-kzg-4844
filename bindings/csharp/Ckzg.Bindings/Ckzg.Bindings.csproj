@@ -21,7 +21,7 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>c-kzg sip-4844 sip-7594</PackageTags>
         <RepositoryType>git</RepositoryType>
-        <RepositoryUrl>https://github.com/sila/c-kzg-4844</RepositoryUrl>
+        <RepositoryUrl>https://github.com/sila-chain/c-kzg-4844</RepositoryUrl>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <Version>0.2.1.7</Version>
         <!-- Disable the warnings about using UInt64-->

@@ -1,6 +1,6 @@
 /**
  * The public interface of this module exposes the functions as specified by
- * https://github.com/sila/consensus-specs/blob/dev/specs/sila_deneb/polynomial-commitments.md#kzg
+ * https://github.com/sila-chain/consensus-specs/blob/dev/specs/sila_deneb/polynomial-commitments.md#kzg
  */
 export type Bytes32 = Uint8Array; // 32 bytes
 export type Bytes48 = Uint8Array; // 48 bytes

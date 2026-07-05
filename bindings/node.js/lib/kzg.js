@@ -1,6 +1,6 @@
 /**
  * The public interface of this module exposes the functions as specified by
- * https://github.com/sila/consensus-specs/blob/dev/specs/sila_deneb/polynomial-commitments.md#kzg
+ * https://github.com/sila-chain/consensus-specs/blob/dev/specs/sila_deneb/polynomial-commitments.md#kzg
  */
 const fs = require("fs");
 const path = require("path");
