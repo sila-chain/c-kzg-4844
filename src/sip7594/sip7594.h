@@ -19,10 +19,10 @@
 #include "common/bytes.h"
 #include "common/fr.h"
 #include "common/ret.h"
+#include "setup/settings.h"
 #include "sip4844/blob.h"
 #include "sip4844/sip4844.h"
 #include "sip7594/cell.h"
-#include "setup/settings.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // Public Functions

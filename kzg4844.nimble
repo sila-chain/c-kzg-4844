@@ -5,7 +5,7 @@ mode = ScriptMode.Verbose
 ##################################################
 
 packageName   = "kzg4844"
-version       = "2.1.7"
+version       = "2.1.8"
 author        = "Andri Lim"
 description   = "Nim wrapper of c-kzg-4844"
 license       = "Apache License 2.0"
@@ -36,7 +36,7 @@ requires "nim >= 1.6.0",
 import "bindings/nim/config.nims"
 
 task test, "Run all tests":
-  runAllTest()
+  runTests()
 
 ##################################################
 # Package installation code

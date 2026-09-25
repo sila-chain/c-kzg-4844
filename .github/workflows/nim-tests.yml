@@ -21,20 +21,20 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       with:
         submodules: true
 
     - name: Cache choosenim
       id: cache-choosenim
-      uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
+      uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
       with:
         path: ~/.choosenim
         key: ${{ runner.os }}-choosenim-${{ matrix.nim-version}}
 
     - name: Cache nimble
       id: cache-nimble
-      uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
+      uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
       with:
         path: ~/.nimble
         key: ${{ runner.os }}-nimble-${{ matrix.nim-version}}-${{ hashFiles('bindings/nim/kzg_abi.nim') }}
@@ -50,7 +50,8 @@ jobs:
       run: |
         nimble install -y stew
         nimble install -y unittest2
-        nimble install -y yaml
+        # yaml-test-suite uses directory symlinks that fail on Windows.
+        nimble install -y yaml --ignoreSubmodules
 
     - name: Test
       run: |

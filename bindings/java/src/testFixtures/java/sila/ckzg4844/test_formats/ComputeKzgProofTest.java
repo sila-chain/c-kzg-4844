@@ -1,8 +1,8 @@
 package sila.ckzg4844.test_formats;
 
-import sila.ckzg4844.ProofAndY;
 import java.util.List;
 import org.apache.tuweni.bytes.Bytes;
+import sila.ckzg4844.ProofAndY;
 
 public class ComputeKzgProofTest {
   public static class Input {

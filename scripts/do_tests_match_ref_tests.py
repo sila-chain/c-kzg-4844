@@ -2,7 +2,6 @@
 
 import glob
 import hashlib
-import json
 import os
 import tarfile
 import tempfile
@@ -11,15 +10,16 @@ import urllib.request
 
 def download_latest_tests(output_dir):
     """
-    Download the latest KZG reference tests (including pre-releases).
-    """
-    with urllib.request.urlopen("https://api.github.com/repos/sila/consensus-spec-tests/releases") as response:
-        releases = json.loads(response.read().decode())
+    Download the authoritative Sila consensus-spec-tests main tree.
 
-    for asset in releases[0]["assets"]:
-        if asset["name"] == "general.tar.gz":
-            file_name = os.path.join(output_dir, asset["name"])
-            download_url = asset["browser_download_url"]
+    Sila reference tests are tracked directly in sila-chain/consensus-spec-tests
+    rather than published as GitHub release assets.
+    """
+    file_name = os.path.join(output_dir, "consensus-spec-tests-main.tar.gz")
+    download_url = (
+        "https://github.com/sila-chain/consensus-spec-tests/"
+        "archive/refs/heads/main.tar.gz"
+    )
 
     print(f"Downloading: {download_url}")
     with urllib.request.urlopen(download_url) as download_response:
@@ -46,13 +46,29 @@ def find_data_yaml_files(root_dir):
     """
     pattern = os.path.join(root_dir, "**", "data.yaml")
     data_yaml_files = glob.glob(pattern, recursive=True)
-    return [f for f in data_yaml_files if "/kzg-sila-mainnet/" in f]
+    return [
+        f
+        for f in data_yaml_files
+        if "/kzg-sila-mainnet/" in f or "/kzg-sila_mainnet/" in f
+    ]
 
 
 def sha256_hash_file(file_path):
     """
-    Get the sha256hash for some file.
+    Get the SHA-256 hash for a file.
+
+    GitHub source archives contain Git LFS pointer files rather than the
+    corresponding large objects. For those pointers, the recorded SHA-256 OID
+    is the content hash of the authoritative object, so compare against that
+    instead of hashing the pointer text itself.
     """
+    with open(file_path, "rb") as f:
+        prefix = f.read(256)
+        if prefix.startswith(b"version https://git-lfs.github.com/spec/v1\n"):
+            for line in prefix.splitlines():
+                if line.startswith(b"oid sha256:"):
+                    return line.removeprefix(b"oid sha256:").decode("ascii")
+
     sha256_hash = hashlib.sha256()
     with open(file_path, "rb") as f:
         for byte_block in iter(lambda: f.read(4096), b""):
@@ -71,8 +87,15 @@ def create_normalized_file_to_hash_dict(files):
     d = {}
     for file in files:
         parts = file.split(os.path.sep)
-        index = parts.index("kzg-sila-mainnet") - 1
-        key = os.path.sep.join(parts[index:])
+        test_root = (
+            "kzg-sila-mainnet"
+            if "kzg-sila-mainnet" in parts
+            else "kzg-sila_mainnet"
+        )
+        index = parts.index(test_root) - 1
+        normalized_parts = parts[index:]
+        normalized_parts[1] = "kzg-sila-mainnet"
+        key = os.path.sep.join(normalized_parts)
         d[key] = sha256_hash_file(file)
     return d
 

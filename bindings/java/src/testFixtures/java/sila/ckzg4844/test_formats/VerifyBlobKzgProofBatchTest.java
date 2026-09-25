@@ -1,9 +1,9 @@
 package sila.ckzg4844.test_formats;
 
-import sila.ckzg4844.TestUtils;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.apache.tuweni.bytes.Bytes;
+import sila.ckzg4844.TestUtils;
 
 public class VerifyBlobKzgProofBatchTest {
   public static class Input {
