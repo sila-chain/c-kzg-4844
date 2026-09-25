@@ -1,18 +1,17 @@
 package sila.ckzg4844;
 
-import static sila.ckzg4844.CKZG4844JNI.BYTES_PER_CELL;
-import static sila.ckzg4844.CKZG4844JNI.BYTES_PER_COMMITMENT;
-import static sila.ckzg4844.CKZG4844JNI.BYTES_PER_PROOF;
-import static sila.ckzg4844.CKZG4844JNI.CELLS_PER_EXT_BLOB;
-import static sila.ckzg4844.CKZGException.CKZGError.C_KZG_BADARGS;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static sila.ckzg4844.CKZG4844JNI.BYTES_PER_CELL;
+import static sila.ckzg4844.CKZG4844JNI.BYTES_PER_COMMITMENT;
+import static sila.ckzg4844.CKZG4844JNI.BYTES_PER_PROOF;
+import static sila.ckzg4844.CKZG4844JNI.CELLS_PER_EXT_BLOB;
+import static sila.ckzg4844.CKZGException.CKZGError.C_KZG_BADARGS;
 
-import sila.ckzg4844.test_formats.*;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
@@ -20,6 +19,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.MethodSource;
+import sila.ckzg4844.test_formats.*;
 
 public class CKZG4844JNITest {
   private enum TrustedSetupSource {
