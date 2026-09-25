@@ -19,8 +19,8 @@
 #include "common/ec.h"
 #include "common/ret.h"
 #include "common/utils.h"
-#include "sip7594/fft.h"
 #include "setup/settings.h"
+#include "sip7594/fft.h"
 
 #include <stdlib.h> /* For NULL */
 #include <string.h> /* For memcpy */
