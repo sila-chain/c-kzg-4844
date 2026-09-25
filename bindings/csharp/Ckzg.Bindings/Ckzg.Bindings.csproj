@@ -13,7 +13,7 @@
     <PropertyGroup>
         <Authors>Sila Foundation</Authors>
         <Copyright>Sila Foundation</Copyright>
-        <Description>The C# bindings for the Polynomial Commitments API library for EIP-4844 and EIP-7594</Description>
+        <Description>The C# bindings for the Polynomial Commitments API library for SIP-4844 and SIP-7594</Description>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
         <IncludeSymbols>true</IncludeSymbols>
         <PackageId>Ckzg.Bindings</PackageId>
