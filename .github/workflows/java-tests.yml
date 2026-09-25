@@ -164,9 +164,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          repo="${{ github.repository }}"
           tag="sila-v2.1.8"
           asset="release/sila-ckzg4844-jni-v2.1.8.jar"
-          if ! gh release view "$tag" >/dev/null 2>&1; then
-            gh release create "$tag" --target "${{ github.sha }}" --title "Sila KZG Java v2.1.8" --notes "Sila-native Java JNI artifact for c-kzg-4844 v2.1.8."
+          if ! gh release view "$tag" --repo "$repo" >/dev/null 2>&1; then
+            gh release create "$tag" --repo "$repo" --target "${{ github.sha }}" --title "Sila KZG Java v2.1.8" --notes "Sila-native Java JNI artifact for c-kzg-4844 v2.1.8."
           fi
-          gh release upload "$tag" "$asset" --clobber
+          gh release upload "$tag" "$asset" --repo "$repo" --clobber
