@@ -1,10 +1,10 @@
 package sila.ckzg4844.test_formats;
 
-import sila.ckzg4844.CellsAndProofs;
-import sila.ckzg4844.TestUtils;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.apache.tuweni.bytes.Bytes;
+import sila.ckzg4844.CellsAndProofs;
+import sila.ckzg4844.TestUtils;
 
 public class ComputeCellsAndKzgProofsTest {
   public static class Input {
