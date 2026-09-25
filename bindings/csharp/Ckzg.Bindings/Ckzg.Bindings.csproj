@@ -13,13 +13,13 @@
     <PropertyGroup>
         <Authors>Sila Foundation</Authors>
         <Copyright>Sila Foundation</Copyright>
-        <Description>The C# bindings for the Polynomial Commitments API library for SIP-4844 and SIP-7594</Description>
+        <Description>The C# bindings for the Polynomial Commitments API library for EIP-4844 and EIP-7594</Description>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
         <IncludeSymbols>true</IncludeSymbols>
         <PackageId>Ckzg.Bindings</PackageId>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageTags>c-kzg sip-4844 sip-7594</PackageTags>
+        <PackageTags>c-kzg eip-4844 eip-7594</PackageTags>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/sila-chain/c-kzg-4844</RepositoryUrl>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
@@ -34,6 +34,7 @@
 
     <ItemGroup>
         <Content CopyToOutputDirectory="PreserveNewest" Include="runtimes/win-x64/native/ckzg.dll" Condition="Exists('runtimes/win-x64/native/ckzg.dll')" Pack="true" PackagePath="runtimes/win-x64/native/ckzg.dll" />
+        <Content CopyToOutputDirectory="PreserveNewest" Include="runtimes/win-arm64/native/ckzg.dll" Condition="Exists('runtimes/win-arm64/native/ckzg.dll')" Pack="true" PackagePath="runtimes/win-arm64/native/ckzg.dll" />
 
         <Content CopyToOutputDirectory="PreserveNewest" Include="runtimes/linux-x64/native/ckzg.so" Condition="Exists('runtimes/linux-x64/native/ckzg.so')" Pack="true" PackagePath="runtimes/linux-x64/native/ckzg.so" />
         <Content CopyToOutputDirectory="PreserveNewest" Include="runtimes/linux-arm64/native/ckzg.so" Condition="Exists('runtimes/linux-arm64/native/ckzg.so')" Pack="true" PackagePath="runtimes/linux-arm64/native/ckzg.so" />
