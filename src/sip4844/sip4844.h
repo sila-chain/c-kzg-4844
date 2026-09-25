@@ -19,8 +19,8 @@
 #include "common/bytes.h"
 #include "common/ec.h"
 #include "common/fr.h"
-#include "sip4844/blob.h"
 #include "setup/settings.h"
+#include "sip4844/blob.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // Types
