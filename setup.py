@@ -36,7 +36,7 @@ def main():
 
     setup(
         name="ckzg",
-        version="2.1.7",
+        version="2.1.8",
         author="Sila Foundation",
         author_email="security@sila.org",
         url="https://github.com/sila-chain/c-kzg-4844",
