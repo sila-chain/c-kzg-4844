@@ -55,8 +55,20 @@ def find_data_yaml_files(root_dir):
 
 def sha256_hash_file(file_path):
     """
-    Get the sha256hash for some file.
+    Get the SHA-256 hash for a file.
+
+    GitHub source archives contain Git LFS pointer files rather than the
+    corresponding large objects. For those pointers, the recorded SHA-256 OID
+    is the content hash of the authoritative object, so compare against that
+    instead of hashing the pointer text itself.
     """
+    with open(file_path, "rb") as f:
+        prefix = f.read(256)
+        if prefix.startswith(b"version https://git-lfs.github.com/spec/v1\n"):
+            for line in prefix.splitlines():
+                if line.startswith(b"oid sha256:"):
+                    return line.removeprefix(b"oid sha256:").decode("ascii")
+
     sha256_hash = hashlib.sha256()
     with open(file_path, "rb") as f:
         for byte_block in iter(lambda: f.read(4096), b""):
