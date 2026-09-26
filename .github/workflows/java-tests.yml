@@ -163,6 +163,7 @@ jobs:
       - name: Publish Sila Java artifact
         env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
         run: |
           tag="sila-v2.1.8"
           asset="release/sila-ckzg4844-jni-v2.1.8.jar"
