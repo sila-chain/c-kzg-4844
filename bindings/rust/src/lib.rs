@@ -23,13 +23,6 @@ pub use bindings::{
 #[cfg(feature = "sila_kzg_settings")]
 pub use sila_kzg_settings::{sila_kzg_settings, sila_kzg_settings_arc};
 
-// Preserve the upstream c-kzg API expected by external Alloy crates while routing to Sila KZG.
-#[cfg(feature = "ethereum_kzg_settings")]
-pub use sila_kzg_settings::{
-    sila_kzg_settings as ethereum_kzg_settings,
-    sila_kzg_settings_arc as ethereum_kzg_settings_arc,
-};
-
 // Expose the constants.
 pub use bindings::{
     BYTES_PER_BLOB, BYTES_PER_CELL, BYTES_PER_COMMITMENT, BYTES_PER_FIELD_ELEMENT, BYTES_PER_PROOF,
