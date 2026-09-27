@@ -26,6 +26,8 @@ serde = ["dep:serde"]
 arbitrary = ["dep:arbitrary"]
 generate-bindings = ["dep:bindgen"]
 sila_kzg_settings = ["dep:once_cell"]
+# Compatibility alias required by upstream alloy-eips; implementation remains Sila KZG.
+ethereum_kzg_settings = ["sila_kzg_settings"]
 
 # Enable this feature when running the tests to generate the fuzzing corpus.
 # This converts the yaml reference tests into a binary form for the fuzzer.
