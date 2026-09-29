@@ -114,6 +114,8 @@ jobs:
     name: Build .NET wrapper
     runs-on: ubuntu-latest
     needs: test-ckzg-dotnet
+    env:
+      NUGET_USER: ${{ secrets.NUGET_USER }}
     permissions:
       contents: read
       id-token: write
@@ -145,13 +147,13 @@ jobs:
         name: Ckzg.Bindings-${{ inputs.version || env.binding_build_number_based_version }}
         path: bindings/csharp/nupkgs/Ckzg.Bindings.*.nupkg
     - name: NuGet login
-      if: github.ref == 'refs/heads/main'
+      if: github.ref == 'refs/heads/main' && env.NUGET_USER != ''
       uses: nuget/login@8d196754b4036150537f80ac539e15c2f1028841 # v1.2.0
       id: login
       with:
         user: ${{ secrets.NUGET_USER }}
     - name: Publish package
-      if: github.ref == 'refs/heads/main'
+      if: github.ref == 'refs/heads/main' && env.NUGET_USER != ''
       run: |
         dotnet nuget push bindings/csharp/nupkgs/*.nupkg \
           -k "${{ steps.login.outputs.NUGET_API_KEY }}" \
